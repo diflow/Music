@@ -8,13 +8,14 @@
 import UIKit
 import Alamofire
 
-struct TrackModel {
-    var trackName: String
-    var artistName: String
-}
+//struct TrackModel {
+//    var trackName: String
+//    var artistName: String
+//}
 
-class SearchViewController: UITableViewController {
+class SearchMusicViewController: UITableViewController {
     
+    var networkService = NetworkService()
     let searchController = UISearchController(searchResultsController: nil)
     
     var tracks = [Track]()
@@ -53,34 +54,14 @@ class SearchViewController: UITableViewController {
     }
 }
 
-extension SearchViewController: UISearchBarDelegate {
+extension SearchMusicViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         print(searchText)
         
-        let url = "https://itunes.apple.com/search?term=\(searchText)"
-        
-        AF.request(url).response { (dataResponse) in
-            if let error = dataResponse.error {
-                print(error)
-                return
-            }
-            
-            guard let data = dataResponse.data else { return }
-            
-            let decoder = JSONDecoder()
-            do {
-                let objects = try decoder.decode(SearchResponse.self, from: data)
-                print(objects)
-                self.tracks = objects.results
-                self.tableView.reloadData()
-                
-            } catch let error {
-                print(error)
-            }
-            
-//            let someString = String(data: data, encoding: .utf8)
-//            print(someString ?? "")
+        networkService.fetchTracks(searchText: searchText) { [weak self] (searchResults) in
+            self?.tracks = searchResults?.results ?? []
+            self?.tableView.reloadData()
         }
         
     }
