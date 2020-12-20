@@ -27,6 +27,9 @@
 		2C68B0E0258C112500DC255C /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68B0DF258C112500DC255C /* SearchResponse.swift */; };
 		2CFB9683258E35AB00371E5E /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFB9682258E35AB00371E5E /* TrackCell.xib */; };
 		2CFB9686258E35D900371E5E /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB9685258E35D900371E5E /* TrackCell.swift */; };
+		2CFB9695258E951900371E5E /* FooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB9694258E951900371E5E /* FooterView.swift */; };
+		2CFB9699258EA44300371E5E /* TrackDetailView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2CFB9698258EA44300371E5E /* TrackDetailView.xib */; };
+		2CFB969C258EA45400371E5E /* TrackDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CFB969B258EA45400371E5E /* TrackDetailView.swift */; };
 		FE84A845E6319C0CB3103EA3 /* Pods_Music.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CEBF57273180EA836D5E821 /* Pods_Music.framework */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +57,9 @@
 		2C68B0DF258C112500DC255C /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
 		2CFB9682258E35AB00371E5E /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		2CFB9685258E35D900371E5E /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		2CFB9694258E951900371E5E /* FooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterView.swift; sourceTree = "<group>"; };
+		2CFB9698258EA44300371E5E /* TrackDetailView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackDetailView.xib; sourceTree = "<group>"; };
+		2CFB969B258EA45400371E5E /* TrackDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackDetailView.swift; sourceTree = "<group>"; };
 		94CC219A47CC6B5F0E317C05 /* Pods-Music.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music.release.xcconfig"; path = "Target Support Files/Pods-Music/Pods-Music.release.xcconfig"; sourceTree = "<group>"; };
 		9E68FEB6B398D5465BDF233F /* Pods-Music.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music.debug.xcconfig"; path = "Target Support Files/Pods-Music/Pods-Music.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +79,8 @@
 		2C221A5D258C9F730092A73E /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				2CFB9697258EA40400371E5E /* TrackDetailView */,
+				2CFB9692258E94ED00371E5E /* Footer View */,
 				2CFB9681258E358700371E5E /* Cell */,
 				2C221A7E258CA8F30092A73E /* SearchViewController.storyboard */,
 				2C221A73258CA11E0092A73E /* SearchViewController.swift */,
@@ -156,6 +164,23 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		2CFB9692258E94ED00371E5E /* Footer View */ = {
+			isa = PBXGroup;
+			children = (
+				2CFB9694258E951900371E5E /* FooterView.swift */,
+			);
+			path = "Footer View";
+			sourceTree = "<group>";
+		};
+		2CFB9697258EA40400371E5E /* TrackDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				2CFB9698258EA44300371E5E /* TrackDetailView.xib */,
+				2CFB969B258EA45400371E5E /* TrackDetailView.swift */,
+			);
+			path = TrackDetailView;
+			sourceTree = "<group>";
+		};
 		8A92F9256FF46DCA220B0B2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +258,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C68B0BD258BDACE00DC255C /* LaunchScreen.storyboard in Resources */,
+				2CFB9699258EA44300371E5E /* TrackDetailView.xib in Resources */,
 				2CFB9683258E35AB00371E5E /* TrackCell.xib in Resources */,
 				2C68B0BA258BDACE00DC255C /* Assets.xcassets in Resources */,
 				2C221A7F258CA8F30092A73E /* SearchViewController.storyboard in Resources */,
@@ -294,6 +320,7 @@
 				2C68B0B5258BDACB00DC255C /* ViewController.swift in Sources */,
 				2C68B0E0258C112500DC255C /* SearchResponse.swift in Sources */,
 				2C221A7B258CA11E0092A73E /* SearchInteractor.swift in Sources */,
+				2CFB9695258E951900371E5E /* FooterView.swift in Sources */,
 				2CFB9686258E35D900371E5E /* TrackCell.swift in Sources */,
 				2C68B0B1258BDACB00DC255C /* AppDelegate.swift in Sources */,
 				2C68B0C6258BDB3C00DC255C /* MainTabBarController.swift in Sources */,
@@ -303,6 +330,7 @@
 				2C221A79258CA11E0092A73E /* SearchModels.swift in Sources */,
 				2C68B0B3258BDACB00DC255C /* SceneDelegate.swift in Sources */,
 				2C221A76258CA11E0092A73E /* SearchPresenter.swift in Sources */,
+				2CFB969C258EA45400371E5E /* TrackDetailView.swift in Sources */,
 				2C221A5B258C90E20092A73E /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
