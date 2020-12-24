@@ -32,6 +32,7 @@ class TrackDetailView: UITableViewCell {
     }()
     
     weak var delegate: TrackMovingDelegate?
+    weak var tabBarDelegate: MainTabBarControllerDelegate?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -121,11 +122,14 @@ class TrackDetailView: UITableViewCell {
         player.seek(to: seekTime)
     }
     @IBAction func handleVolumeSlider(_ sender: Any) {
+        
         player.volume = volumeSlider.value
     }
     
     @IBAction func dragDownButtonTapped(_ sender: Any) {
-        self.removeFromSuperview()
+        //self.tabBarDelegate?.minimizeTrackDetailController()
+        
+       self.removeFromSuperview()
     }
     
     @IBAction func previousTrack(_ sender: Any) {
