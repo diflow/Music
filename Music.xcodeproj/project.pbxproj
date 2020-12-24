@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		2C221A7B258CA11E0092A73E /* SearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C221A74258CA11E0092A73E /* SearchInteractor.swift */; };
 		2C221A7F258CA8F30092A73E /* SearchViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C221A7E258CA8F30092A73E /* SearchViewController.storyboard */; };
 		2C221A83258CABEE0092A73E /* UIViewController + Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C221A82258CABEE0092A73E /* UIViewController + Storyboard.swift */; };
+		2C493EC2259523850056107E /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C493EC1259523850056107E /* Library.swift */; };
+		2C493EC6259552A60056107E /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C493EC5259552A60056107E /* UserDefaults.swift */; };
+		2C493ECA25955B630056107E /* URLImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2C493EC925955B630056107E /* URLImage */; };
 		2C68B0B1258BDACB00DC255C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68B0B0258BDACB00DC255C /* AppDelegate.swift */; };
 		2C68B0B3258BDACB00DC255C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68B0B2258BDACB00DC255C /* SceneDelegate.swift */; };
 		2C68B0B5258BDACB00DC255C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C68B0B4258BDACB00DC255C /* ViewController.swift */; };
@@ -46,6 +49,8 @@
 		2C221A74258CA11E0092A73E /* SearchInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchInteractor.swift; sourceTree = "<group>"; };
 		2C221A7E258CA8F30092A73E /* SearchViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchViewController.storyboard; sourceTree = "<group>"; };
 		2C221A82258CABEE0092A73E /* UIViewController + Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController + Storyboard.swift"; sourceTree = "<group>"; };
+		2C493EC1259523850056107E /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
+		2C493EC5259552A60056107E /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		2C68B0AD258BDACB00DC255C /* Music.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Music.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C68B0B0258BDACB00DC255C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C68B0B2258BDACB00DC255C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C493ECA25955B630056107E /* URLImage in Frameworks */,
 				FE84A845E6319C0CB3103EA3 /* Pods_Music.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -141,6 +147,7 @@
 				2C68B0B2258BDACB00DC255C /* SceneDelegate.swift */,
 				2C221A6D258CA01F0092A73E /* Services */,
 				2C68B0C5258BDB3C00DC255C /* MainTabBarController.swift */,
+				2C493EC1259523850056107E /* Library.swift */,
 				2C221A5D258C9F730092A73E /* Search */,
 				2C68B0C8258BDEE500DC255C /* SearchMusicViewController.swift */,
 				2C68B0B4258BDACB00DC255C /* ViewController.swift */,
@@ -158,6 +165,7 @@
 			children = (
 				2CFB9682258E35AB00371E5E /* TrackCell.xib */,
 				2CFB9685258E35D900371E5E /* TrackCell.swift */,
+				2C493EC5259552A60056107E /* UserDefaults.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -222,6 +230,9 @@
 			dependencies = (
 			);
 			name = Music;
+			packageProductDependencies = (
+				2C493EC925955B630056107E /* URLImage */,
+			);
 			productName = Music;
 			productReference = 2C68B0AD258BDACB00DC255C /* Music.app */;
 			productType = "com.apple.product-type.application";
@@ -249,6 +260,9 @@
 				Base,
 			);
 			mainGroup = 2C68B0A4258BDACB00DC255C;
+			packageReferences = (
+				2C493EC825955B630056107E /* XCRemoteSwiftPackageReference "url-image" */,
+			);
 			productRefGroup = 2C68B0AE258BDACB00DC255C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -326,6 +340,7 @@
 				2C68B0B5258BDACB00DC255C /* ViewController.swift in Sources */,
 				2C68B0E0258C112500DC255C /* SearchResponse.swift in Sources */,
 				2C221A7B258CA11E0092A73E /* SearchInteractor.swift in Sources */,
+				2C493EC6259552A60056107E /* UserDefaults.swift in Sources */,
 				2CFB9695258E951900371E5E /* FooterView.swift in Sources */,
 				2C8DE37E258FF4CD00FD85A2 /* CMTime + Extension.swift in Sources */,
 				2CFB9686258E35D900371E5E /* TrackCell.swift in Sources */,
@@ -338,6 +353,7 @@
 				2C221A79258CA11E0092A73E /* SearchModels.swift in Sources */,
 				2C68B0B3258BDACB00DC255C /* SceneDelegate.swift in Sources */,
 				2C221A76258CA11E0092A73E /* SearchPresenter.swift in Sources */,
+				2C493EC2259523850056107E /* Library.swift in Sources */,
 				2CFB969C258EA45400371E5E /* TrackDetailView.swift in Sources */,
 				2C221A5B258C90E20092A73E /* NetworkService.swift in Sources */,
 			);
@@ -545,6 +561,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2C493EC825955B630056107E /* XCRemoteSwiftPackageReference "url-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/dmytro-anokhin/url-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2C493EC925955B630056107E /* URLImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2C493EC825955B630056107E /* XCRemoteSwiftPackageReference "url-image" */;
+			productName = URLImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2C68B0A5258BDACB00DC255C /* Project object */;
 }
